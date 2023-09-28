@@ -13,3 +13,4 @@ let a = 0;
 console.log(a);
 a++;
 console.log(a);
+let e;
