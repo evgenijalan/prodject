@@ -14,3 +14,4 @@ console.log(a);
 a++;
 console.log(a);
 let e;
+e = 0;
