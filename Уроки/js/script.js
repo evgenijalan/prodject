@@ -9,3 +9,4 @@ let arr = ['plum', 'orange', 'apple'];
 console.log(arr[1]);
 
 let a = 0;
+console.log(a);
