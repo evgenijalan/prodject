@@ -11,3 +11,5 @@ console.log(arr[1]);
 let a = 0;
 
 console.log(a);
+a++;
+console.log(a);
