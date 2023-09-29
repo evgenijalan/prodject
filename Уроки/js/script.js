@@ -55,3 +55,26 @@ switch(num){
         console.log('fask');
         break;        
 }
+
+// ЦЫКЛЫ=========================================
+
+let numm = 50;
+
+/*while(numm < 55){
+    console.log(numm);
+    numm++;
+}
+
+do {
+    console.log(numm);
+}
+while(numm > 55);
+*/
+
+for (let i = 1; i < 8 ; i++){
+    if(i === 6){
+        //break;
+        continue;
+    }
+    console.log(i);
+}
