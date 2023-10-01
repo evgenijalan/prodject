@@ -78,3 +78,41 @@ for (let i = 1; i < 8 ; i++){
     }
     console.log(i);
 }
+
+
+//Функции===================================
+let b;
+
+function showFilmMessage(){
+    console.log('Hello this world');
+    let a = 20;
+    b = 10;   
+}
+showFilmMessage();
+//console.log(a);
+
+function calc(a, b){
+    return( a + b);
+}
+
+console.log(calc(2, 3));
+
+function ret() {
+    let nam = 50;
+    return nam;
+}
+
+const resultNam = ret();
+console.log(resultNam);
+
+const logger = function(){
+    console.log('hello');
+};
+
+logger();
+
+const calc = (a, b) => {
+    return a + b
+};
+
+
