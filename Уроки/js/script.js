@@ -19,7 +19,7 @@ switch(a){
     default:
         console.log('blet!');
         break;        
-}*/
+}
 
 for(let i = 2; i < 8; i= i + 2){
     console.log(i);
@@ -32,5 +32,24 @@ while (a < 5){
     }
     console.log(a);
     a ++;
+}*/
+// Функции=============================================================
+function sum(a, b) {
+    console.log(a + b);
 }
-//=============================================================
+
+sum(2, 3);
+
+function foo(a, b) {
+    return a + b;
+}
+
+let a = foo( 2, 2); 
+console.log(a);
+
+let summ = (a, b)=> {
+    console.log (a + b);
+}
+
+sum( 5, 2);
+console.log(typeof(sum));
