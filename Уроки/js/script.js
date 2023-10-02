@@ -28,7 +28,7 @@ console.log(personalMovieDB);
 */
 
 // Условия =================================
-
+/*
 const num = 59;
 
 if( num < 50){
@@ -55,7 +55,7 @@ switch(num){
         console.log('fask');
         break;        
 }
-
+*/
 // ЦЫКЛЫ=========================================
 
 let numm = 50;
@@ -69,7 +69,7 @@ do {
     console.log(numm);
 }
 while(numm > 55);
-*/
+
 
 for (let i = 1; i < 8 ; i++){
     if(i === 6){
@@ -79,9 +79,9 @@ for (let i = 1; i < 8 ; i++){
     console.log(i);
 }
 
-
+*/
 //Функции===================================
-let b;
+/*let b;
 
 function showFilmMessage(){
     console.log('Hello this world');
@@ -114,5 +114,24 @@ logger();
 const calc = (a, b) => {
     return a + b
 };
+*/
+// Методы и свойства строк чисел ======================
 
+const str = 'test';
 
+console.log(str.length);
+console.log(str.toUpperCase());
+let fruit = 'Some fruit';
+
+console.log(fruit.indexOf('fruit'));
+console.log( fruit.slice(5,10));
+console.log( fruit.substring(5, 10));
+
+console.log(fruit.substr(5, 5));
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));
