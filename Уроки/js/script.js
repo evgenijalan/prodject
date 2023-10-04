@@ -133,3 +133,38 @@ console.log(data.comment.length);
 console.log(data.comment[0].indexOf('qqq'));
 console.log(data.comment[0].substr(data.comment[0].indexOf('qqq'), 3));
 */
+
+//calc ================================
+
+let num1,
+    num2,
+    simbol,
+    result;
+
+function enterNumber(){
+    num1 = +prompt('enter number');
+    simbol = prompt('enter simbol');
+    num2 = +prompt ('enter number');
+}
+
+enterNumber();
+
+function calc(s) {
+    switch(s) {
+        case '+':
+            result = num1 + num2;            
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;    
+    }
+    console.log(result);
+}
+
+calc(simbol);
