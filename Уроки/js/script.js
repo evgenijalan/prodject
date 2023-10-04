@@ -138,7 +138,7 @@ console.log(parseFloat(test));
 */
 
 // колбек функции ======================================
-
+/*
 function first(){
    setTimeout(function(){
     console.log(1);
@@ -160,3 +160,39 @@ function lernJS(lang, callback){
 lernJS('JavaScript', function() {
     console.log('Я прошел этот урок');
 });
+*/
+
+//  Объекты, деструктуризация объектов (ES6) ========
+
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        background: 'red',
+    },
+    makeTest: function() {
+        console.log('test!');
+    }
+}
+
+options.makeTest();
+
+console.log(options.name);
+
+for (let key in options) {
+    if( typeof(options[key]) === 'object'){
+        for (let i in options[key]){
+            console.log(`Свойство ${i}  имеет значение ${options[key][i]}`); 
+        }
+    }else{
+        console.log(`Свойство ${key}  имеет значение ${options[key]}`);
+    }
+}
+
+console.log(Object.keys(options).length);
+
+const {border} = options.colors;
+
+console.log(border);
