@@ -143,8 +143,19 @@ let num1,
 
 function enterNumber(){
     num1 = +prompt('enter number');
+    while(num1 == '' || num1 == null || isNaN(num1)){
+        num1 = +prompt('ERROR! enter number');
+    }
+
     simbol = prompt('enter simbol');
+    while(simbol != '/' && simbol != '*' && simbol != '-' && simbol !='+'){
+        simbol = prompt('ERROR!  enter simbol');
+    }
+
     num2 = +prompt ('enter number');
+    while(num2 == '' || num2 == null || isNaN(num2)){
+        num2 = +prompt('ERROR! enter number');
+    }
 }
 
 enterNumber();
