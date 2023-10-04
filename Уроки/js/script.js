@@ -61,7 +61,7 @@ sum( 5, 2);
 console.log(typeof(sum));
 */
 // методы и свойства строк и чисел =======================
-
+/*
 let str = 'вася доит корову';
 
 console.log(str.indexOf('доит'));
@@ -81,3 +81,55 @@ console.log(parseInt(num));
 console.log(parseInt(num2));
 console.log(parseFloat(num));
 console.log(parseFloat(num2));
+*/
+
+// exercise function, prompt, array ===================================
+/*
+let name,
+    surname;
+
+const data = {
+    name: {},
+    dish: [],
+    comment: [],
+};
+
+function yourName(){
+    name = prompt('Ваше имя?');
+    surname = prompt('Ваша фамилия?');
+
+    while(name =='' || name == null || surname == '' || surname == null){
+        name = prompt('Ваше имя?');
+        surname = prompt('Ваша фамилия?');
+    }
+}
+
+yourName();
+
+function yourNameData() {
+    data.name['name'] = name;
+    data.name['surname'] = surname;
+}
+
+yourNameData();
+
+function dishData(){
+    for(let i = 1; i < 3; i++){
+        data.dish[i - 1] = prompt(`dish ${i}`);
+    }
+}
+
+dishData();
+
+function commentData(){
+    data.comment[0] = prompt('Введите свой комментарий').toLowerCase();
+}
+
+commentData();
+
+console.log(data);
+console.log(data.comment);
+console.log(data.comment.length);
+console.log(data.comment[0].indexOf('qqq'));
+console.log(data.comment[0].substr(data.comment[0].indexOf('qqq'), 3));
+*/
