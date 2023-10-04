@@ -135,7 +135,7 @@ console.log(data.comment[0].substr(data.comment[0].indexOf('qqq'), 3));
 */
 
 //calc ================================
-
+/*
 let num1,
     num2,
     simbol,
@@ -179,3 +179,55 @@ function calc(s) {
 }
 
 calc(simbol);
+*/
+
+//function деструктуризация ========================
+/*
+const personalDB = {
+    name: 'Alan',
+    surname: ' Grant',
+    age: 33,
+    mission : function() {
+        console.log(`${personalDB.name} ${personalDB.surname}`);
+    }
+};
+
+personalDB.mission();
+
+for(let key in personalDB){
+    console.log(personalDB[key]);
+}
+
+console.log(Object.keys(personalDB));
+console.log(Object.keys(personalDB).length);
+
+const {name} =  personalDB;
+console.log(name);
+
+function calcValue(a, b){
+    return [
+        a + b,
+        a - b,
+        a * b,
+        a / b,
+    ]
+}
+
+const [sum,, mult] = calcValue( 2, 5);
+console.log(sum, mult);
+
+const personal = {
+    name: 'Max',
+    age: 20,
+    adress: {
+        country: 'Russian',
+        city: 'Moscow',
+    },
+};
+
+//const {name} = personal;
+//console.log(name);
+
+const {name: firstName, age, car = 'Машины нет', adress: {city}} = personal;
+console.log(firstName,age, car, city);
+*/
