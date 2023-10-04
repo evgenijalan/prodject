@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 let number = 5;
 const leftBorderWidth = 1;
 
@@ -8,7 +8,7 @@ console.log(number);
 let arr = ['plum', 'orange', 'apple'];
 console.log(arr[1]);
 
-/*let numberOfFilms = +prompt( 'Сколько фильмов вы посмотрели', '');
+let numberOfFilms = +prompt( 'Сколько фильмов вы посмотрели', '');
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -57,10 +57,10 @@ switch(num){
 }
 */
 // ЦЫКЛЫ=========================================
-
+/*
 let numm = 50;
 
-/*while(numm < 55){
+while(numm < 55){
     console.log(numm);
     numm++;
 }
@@ -116,7 +116,7 @@ const calc = (a, b) => {
 };
 */
 // Методы и свойства строк чисел ======================
-
+/*
 const str = 'test';
 
 console.log(str.length);
@@ -135,3 +135,28 @@ console.log(Math.round(num));
 const test = '12.2px';
 console.log(parseInt(test));
 console.log(parseFloat(test));
+*/
+
+// колбек функции ======================================
+
+function first(){
+   setTimeout(function(){
+    console.log(1);
+   }, 1000);  
+}
+
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+function lernJS(lang, callback){
+    console.log(`я учу ${lang}`);
+    callback();
+}
+
+lernJS('JavaScript', function() {
+    console.log('Я прошел этот урок');
+});
