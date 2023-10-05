@@ -245,7 +245,7 @@ arr.forEach(function(item, i, arr) {
 const str = prompt('', '');
 const products = str.split(', ');
 console.log(products);
-*/
+
 //---------------------------------------------------------
 
 const arr = ['alan', 'grant', 22, 'study'];
@@ -261,3 +261,85 @@ console.log(array);
 function compareNum(a, b) {
     return a - b;
 }
+*/
+// Передача по ссылке или по значению, Spread оператор ==========
+//---------------------------------------------------------------
+/*
+// function copy(mainObj) {
+//     let objCopy = {};
+
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4,
+    }
+};
+
+// const newNumbers = copy(numbers);
+
+// newNumbers.a = 10;
+// console.log(newNumbers);
+// console.log(numbers);
+
+const add = {
+    d: 17,
+    e: 20,
+};
+
+console.log(Object.assign(numbers, add));
+
+//------------------------------------------------------------------
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+oldArray[2] = 'd';
+
+console.log(newArray);
+console.log(oldArray);
+
+//-------------------------------------------------------------------
+
+const video = ['youtube', 'video', 'rutube'],
+      blog = ['wordpress', 'livejornal', 'blogger'],
+      internet = [...video, ...blog, 'vk', 'facebook'];
+      console.log(internet);
+
+//--------------------------------------------------------------------
+
+function log(a, b, c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+log(...num);
+
+//---------------------------------------------------------------------
+
+const array = ['a', 'b'];
+
+const newArr = [...array];
+console.log(newArr);
+
+//--------------------------------------------------------------------
+
+const q = {
+    one: 1,
+    two: 2
+}
+
+const newQ = {...q};
+
+console.log(newQ);
+*/
