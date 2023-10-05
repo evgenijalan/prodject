@@ -39,7 +39,8 @@ while (a < 7){
 
 }
 */
-// Функции=============================================================
+// Функции========================================================================
+//--------------------------------------------------------------------------------
 /*function sum(a, b) {
     console.log(a + b);
 }
@@ -60,7 +61,8 @@ let summ = (a, b)=> {
 sum( 5, 2);
 console.log(typeof(sum));
 */
-// методы и свойства строк и чисел =======================
+// методы и свойства строк и чисел ===============================================================
+//------------------------------------------------------------------------------------------------
 /*
 let str = 'вася доит корову';
 
@@ -83,7 +85,8 @@ console.log(parseFloat(num));
 console.log(parseFloat(num2));
 */
 
-// exercise function, prompt, array ===================================
+// exercise function, prompt, array ===============================================
+//-------------------------------------------------------------------------------
 /*
 let name,
     surname;
@@ -134,7 +137,8 @@ console.log(data.comment[0].indexOf('qqq'));
 console.log(data.comment[0].substr(data.comment[0].indexOf('qqq'), 3));
 */
 
-//calc ================================
+//calc ============================================================================
+//---------------------------------------------------------------------------------
 /*
 let num1,
     num2,
@@ -160,6 +164,8 @@ function enterNumber(){
 
 enterNumber();
 
+//--------------------------------------------------------------------------------------------
+
 function calc(s) {
     switch(s) {
         case '+':
@@ -181,7 +187,8 @@ function calc(s) {
 calc(simbol);
 */
 
-//function деструктуризация ========================
+//function деструктуризация ============================================
+//---------------------------------------------------------------------
 /*
 const personalDB = {
     name: 'Alan',
@@ -204,6 +211,8 @@ console.log(Object.keys(personalDB).length);
 const {name} =  personalDB;
 console.log(name);
 
+//---------------------------------------------------------------------------
+
 function calcValue(a, b){
     return [
         a + b,
@@ -215,6 +224,8 @@ function calcValue(a, b){
 
 const [sum,, mult] = calcValue( 2, 5);
 console.log(sum, mult);
+
+//---------------------------------------------------------------------------
 
 const personal = {
     name: 'Max',
@@ -231,3 +242,44 @@ const personal = {
 const {name: firstName, age, car = 'Машины нет', adress: {city}} = personal;
 console.log(firstName,age, car, city);
 */
+
+
+// массивы с свойства ----------------------------------------------------------
+
+// const arr = ['alan', 'grant', 20, 'meried'];
+
+// for(const key of arr){
+//    console.log(key);
+// }
+
+// arr.forEach(function(key, i) {
+//     console.log(`${i}: ${key}`);
+// });
+
+// let arrStr = arr.join(' ');
+// console.log(arrStr);
+// let strArr = arrStr.split(' ');
+// console.log(strArr);
+// console.log(arr.sort());
+
+// -------------------------------------------------------------------------
+
+// const arr = [1, 2, 3, 4];
+
+// let sum = arr.reduce(function(elem, summ){
+//     let rezult = elem + summ;
+//     console.log(summ, elem);
+//     return rezult;
+// });
+
+// console.log(sum);
+
+let array = [1,2,3,4]
+
+  function sumElem(accumulator, currentValue) {
+      let sum = accumulator + currentValue
+      return sum
+  }
+  let result = array.reduce(sumElem, 11);
+  console.log(result);
+
