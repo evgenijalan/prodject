@@ -28,6 +28,7 @@ console.log(personalMovieDB);
 */
 
 // Условия =================================
+//------------------------------------------
 /*
 const num = 59;
 
@@ -40,7 +41,7 @@ if( num < 50){
 }
 
 (num ===50)? console.log('ok'):console.log('error');
-
+//------------------------------------------------------
 switch(num){
     case 58:
         comsole.log('no');
@@ -57,6 +58,7 @@ switch(num){
 }
 */
 // ЦЫКЛЫ=========================================
+//-----------------------------------------------
 /*
 let numm = 50;
 
@@ -70,6 +72,7 @@ do {
 }
 while(numm > 55);
 
+//-------------------------------------------------
 
 for (let i = 1; i < 8 ; i++){
     if(i === 6){
@@ -81,6 +84,7 @@ for (let i = 1; i < 8 ; i++){
 
 */
 //Функции===================================
+//-------------------------------------------
 /*let b;
 
 function showFilmMessage(){
@@ -91,11 +95,15 @@ function showFilmMessage(){
 showFilmMessage();
 //console.log(a);
 
+//--------------------------------------------
+
 function calc(a, b){
     return( a + b);
 }
 
 console.log(calc(2, 3));
+
+//--------------------------------------------
 
 function ret() {
     let nam = 50;
@@ -116,6 +124,7 @@ const calc = (a, b) => {
 };
 */
 // Методы и свойства строк чисел ======================
+//-------------------------------------------------------
 /*
 const str = 'test';
 
@@ -138,6 +147,7 @@ console.log(parseFloat(test));
 */
 
 // колбек функции ======================================
+//------------------------------------------------------
 /*
 function first(){
    setTimeout(function(){
@@ -152,6 +162,7 @@ function second() {
 first();
 second();
 
+//--------------------------------------------------
 function lernJS(lang, callback){
     console.log(`я учу ${lang}`);
     callback();
@@ -163,7 +174,8 @@ lernJS('JavaScript', function() {
 */
 
 //  Объекты, деструктуризация объектов (ES6) ========
-
+//-----------------------------------------------------
+/*
 const options = {
     name: 'test',
     width: 1024,
@@ -180,7 +192,9 @@ const options = {
 options.makeTest();
 
 console.log(options.name);
-
+*/
+//--------------------------------------------------------
+/*
 for (let key in options) {
     if( typeof(options[key]) === 'object'){
         for (let i in options[key]){
@@ -196,3 +210,54 @@ console.log(Object.keys(options).length);
 const {border} = options.colors;
 
 console.log(border);
+*/
+
+// Массиыф псевдомассивы =======================================
+//--------------------------------------------------------------
+/*
+const arr = [1, 2, 3, 6, 8];
+
+//arr.pop();
+arr.push(10);
+
+console.log(arr);
+
+//---------------------------------------------------------
+
+for ( let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+//------------------------------------------------------
+
+for (let value of arr){
+    console.log(value);
+}
+
+//-------------------------------------------------------
+
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+
+//------------------------------------------------------
+
+const str = prompt('', '');
+const products = str.split(', ');
+console.log(products);
+*/
+//---------------------------------------------------------
+
+const arr = ['alan', 'grant', 22, 'study'];
+console.log(arr.sort());
+console.log(arr.join(' '));
+
+//----------------------------------------------------------
+
+const array = [ 1, 13, 2, 16, 8, 22];
+array.sort(compareNum);
+console.log(array);
+
+function compareNum(a, b) {
+    return a - b;
+}
