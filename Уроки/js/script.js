@@ -274,12 +274,11 @@ console.log(firstName,age, car, city);
 
 // console.log(sum);
 
-let array = [1,2,3,4]
+// let array = [1,2,3,4]
 
-  function sumElem(accumulator, currentValue) {
-      let sum = accumulator + currentValue
-      return sum
-  }
-  let result = array.reduce(sumElem, 11);
-  console.log(result);
-
+//   function sumElem(accumulator, currentValue) {
+//       let sum = accumulator + currentValue
+//       return sum
+//   }
+//   let result = array.reduce(sumElem, 11);
+//   console.log(result);
