@@ -245,6 +245,7 @@ console.log(firstName,age, car, city);
 
 
 // массивы с свойства ----------------------------------------------------------
+//------------------------------------------------------------------------------
 
 // const arr = ['alan', 'grant', 20, 'meried'];
 
@@ -282,3 +283,68 @@ console.log(firstName,age, car, city);
 //   }
 //   let result = array.reduce(sumElem, 11);
 //   console.log(result);
+
+// Поверхностные копии обьектов ===============================================================
+//----------------------------------------------------------------------------------------------
+
+// w
+
+// function copy (objCopy) {
+//     let newObj = {};
+    
+//     for(let key in objCopy){
+//         newObj[key] =  objCopy[key];
+//     }
+//     return newObj;
+// }
+
+// let obj2 = copy(obj);
+
+// obj2.name = 'alan';
+// obj2.adress.gorod = 'minsk';
+// console.log(obj2);
+// console.log(obj);
+
+// const obj3 = {
+//     status: 'meried',
+//     study: false,
+// } 
+
+// const obj1 = Object.assign(obj, obj3);
+// console.log(obj1);
+
+//-----------------------------------------------------
+
+// const obj = {
+//     name: 'allen',
+//     surname: 'grant',
+//     age: 33,
+//     adress: {
+//         gorod: 'Moscov',
+//         strasse: 'duort'
+//     }
+// }
+
+// const obj3 = {
+//     status: 'meried',
+//     study: false,
+// }
+
+// const objCopy = {...obj};
+
+// objCopy.adress.gorod = 'Minsk';
+// console.log(obj);
+// console.log(objCopy);
+
+// const objNewCopy = {...obj, ...obj3};
+// console.log(objNewCopy);
+
+//-------------------------------------------------------------
+
+// function foo(a, b, c) {
+//     console.log(a + b + c);
+// }
+
+// const arr = [2, 3, 5];
+
+// foo(...arr);
