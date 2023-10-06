@@ -1,345 +1,350 @@
 "use strict";
-/*
-let number = 5;
-const leftBorderWidth = 1;
+/*let a = 11;
 
-number = 10;
-console.log(number);
-let arr = ['plum', 'orange', 'apple'];
-console.log(arr[1]);
-
-let numberOfFilms = +prompt( 'Сколько фильмов вы посмотрели', '');
-
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-const a = prompt('Один из последних фильмов?' , ''),
-      b = prompt('На солько оцениваете его?', ''),
-      c = prompt('Один из последних фильмов?' , ''),
-      d = prompt('Один из последних фильмов?' , '');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-console.log(personalMovieDB);
-*/
-
-// Условия =================================
-//------------------------------------------
-/*
-const num = 59;
-
-if( num < 50){
-    console.log('Хули так мло ?');
-}else if(num > 100){
-    console.log('Дохера');
-} else{
-    console.log('В точку сука!!!!');
+if (a > 0){
+    console.log('Nice');
+}else if(a < 0){
+    console.log('Fack')
+}else{
+    console.log('Bad');
 }
 
-(num ===50)? console.log('ok'):console.log('error');
-//------------------------------------------------------
-switch(num){
-    case 58:
-        comsole.log('no');
+switch(a){
+    case 0:
+        console.log('ziro')
         break;
-    case 59:
-        console.log('Ya');
-        break;
-    case 60:
-        console.log('no');
+    case 1:
+        console.log('Adyn');
         break;
     default:
-        console.log('fask');
+        console.log('blet!');
         break;        
 }
-*/
-// ЦЫКЛЫ=========================================
-//-----------------------------------------------
-/*
-let numm = 50;
 
-while(numm < 55){
-    console.log(numm);
-    numm++;
-}
-
-do {
-    console.log(numm);
-}
-while(numm > 55);
-
-//-------------------------------------------------
-
-for (let i = 1; i < 8 ; i++){
-    if(i === 6){
-        //break;
-        continue;
-    }
+for(let i = 2; i < 8; i= i + 2){
     console.log(i);
 }
 
+
+let a = 1,
+    b = 0;
+
+while (a < 7){
+    a ++;
+    if( a == 4){
+        continue;
+    }
+    b = a - 1;
+    console.log(b);
+
+}
 */
-//Функции===================================
-//-------------------------------------------
-/*let b;
-
-function showFilmMessage(){
-    console.log('Hello this world');
-    let a = 20;
-    b = 10;   
-}
-showFilmMessage();
-//console.log(a);
-
-//--------------------------------------------
-
-function calc(a, b){
-    return( a + b);
+// Функции========================================================================
+//--------------------------------------------------------------------------------
+/*function sum(a, b) {
+    console.log(a + b);
 }
 
-console.log(calc(2, 3));
+sum(2, 3);
 
-//--------------------------------------------
-
-function ret() {
-    let nam = 50;
-    return nam;
+function foo(a, b) {
+    return a + b;
 }
 
-const resultNam = ret();
-console.log(resultNam);
+let aa = foo( 2, 2); 
+console.log(aa);
 
-const logger = function(){
-    console.log('hello');
-};
+let summ = (a, b)=> {
+    console.log (a + b);
+}
 
-logger();
-
-const calc = (a, b) => {
-    return a + b
-};
+sum( 5, 2);
+console.log(typeof(sum));
 */
-// Методы и свойства строк чисел ======================
-//-------------------------------------------------------
+// методы и свойства строк и чисел ===============================================================
+//------------------------------------------------------------------------------------------------
 /*
-const str = 'test';
+let str = 'вася доит корову';
 
+console.log(str.indexOf('доит'));
+console.log(str.slice(5, 9));
+console.log(str.substring(10, 17));
+console.log(str.substr(5, 4));
 console.log(str.length);
 console.log(str.toUpperCase());
-let fruit = 'Some fruit';
+console.log(str.toLowerCase());
 
-console.log(fruit.indexOf('fruit'));
-console.log( fruit.slice(5,10));
-console.log( fruit.substring(5, 10));
+const num = '12.222px';
+const num2 = 12.222;
 
-console.log(fruit.substr(5, 5));
-
-const num = 12.2;
 console.log(Math.round(num));
-
-const test = '12.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+console.log(Math.round(num2));
+console.log(parseInt(num));
+console.log(parseInt(num2));
+console.log(parseFloat(num));
+console.log(parseFloat(num2));
 */
 
-// колбек функции ======================================
-//------------------------------------------------------
+// exercise function, prompt, array ===============================================
+//-------------------------------------------------------------------------------
 /*
-function first(){
-   setTimeout(function(){
-    console.log(1);
-   }, 1000);  
+let name,
+    surname;
+
+const data = {
+    name: {},
+    dish: [],
+    comment: [],
+};
+
+function yourName(){
+    name = prompt('Ваше имя?');
+    surname = prompt('Ваша фамилия?');
+
+    while(name =='' || name == null || surname == '' || surname == null){
+        name = prompt('Ваше имя?');
+        surname = prompt('Ваша фамилия?');
+    }
 }
 
-function second() {
-    console.log(2);
+yourName();
+
+function yourNameData() {
+    data.name['name'] = name;
+    data.name['surname'] = surname;
 }
 
-first();
-second();
+yourNameData();
 
-//--------------------------------------------------
-function lernJS(lang, callback){
-    console.log(`я учу ${lang}`);
-    callback();
+function dishData(){
+    for(let i = 1; i < 3; i++){
+        data.dish[i - 1] = prompt(`dish ${i}`);
+    }
 }
 
-lernJS('JavaScript', function() {
-    console.log('Я прошел этот урок');
-});
+dishData();
+
+function commentData(){
+    data.comment[0] = prompt('Введите свой комментарий').toLowerCase();
+}
+
+commentData();
+
+console.log(data);
+console.log(data.comment);
+console.log(data.comment.length);
+console.log(data.comment[0].indexOf('qqq'));
+console.log(data.comment[0].substr(data.comment[0].indexOf('qqq'), 3));
 */
 
-//  Объекты, деструктуризация объектов (ES6) ========
-//-----------------------------------------------------
+//calc ============================================================================
+//---------------------------------------------------------------------------------
 /*
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        background: 'red',
+let num1,
+    num2,
+    simbol,
+    result;
+
+function enterNumber(){
+    num1 = +prompt('enter number');
+    while(num1 == '' || num1 == null || isNaN(num1)){
+        num1 = +prompt('ERROR! enter number');
+    }
+
+    simbol = prompt('enter simbol');
+    while(simbol != '/' && simbol != '*' && simbol != '-' && simbol !='+'){
+        simbol = prompt('ERROR!  enter simbol');
+    }
+
+    num2 = +prompt ('enter number');
+    while(num2 == '' || num2 == null || isNaN(num2)){
+        num2 = +prompt('ERROR! enter number');
+    }
+}
+
+enterNumber();
+
+//--------------------------------------------------------------------------------------------
+
+function calc(s) {
+    switch(s) {
+        case '+':
+            result = num1 + num2;            
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;    
+    }
+    console.log(result);
+}
+
+calc(simbol);
+*/
+
+//function деструктуризация ============================================
+//---------------------------------------------------------------------
+/*
+const personalDB = {
+    name: 'Alan',
+    surname: ' Grant',
+    age: 33,
+    mission : function() {
+        console.log(`${personalDB.name} ${personalDB.surname}`);
+    }
+};
+
+personalDB.mission();
+
+for(let key in personalDB){
+    console.log(personalDB[key]);
+}
+
+console.log(Object.keys(personalDB));
+console.log(Object.keys(personalDB).length);
+
+const {name} =  personalDB;
+console.log(name);
+
+//---------------------------------------------------------------------------
+
+function calcValue(a, b){
+    return [
+        a + b,
+        a - b,
+        a * b,
+        a / b,
+    ]
+}
+
+const [sum,, mult] = calcValue( 2, 5);
+console.log(sum, mult);
+
+//---------------------------------------------------------------------------
+
+const personal = {
+    name: 'Max',
+    age: 20,
+    adress: {
+        country: 'Russian',
+        city: 'Moscow',
     },
-    makeTest: function() {
-        console.log('test!');
-    }
-}
+};
 
-options.makeTest();
+//const {name} = personal;
+//console.log(name);
 
-console.log(options.name);
-*/
-//--------------------------------------------------------
-/*
-for (let key in options) {
-    if( typeof(options[key]) === 'object'){
-        for (let i in options[key]){
-            console.log(`Свойство ${i}  имеет значение ${options[key][i]}`); 
-        }
-    }else{
-        console.log(`Свойство ${key}  имеет значение ${options[key]}`);
-    }
-}
-
-console.log(Object.keys(options).length);
-
-const {border} = options.colors;
-
-console.log(border);
+const {name: firstName, age, car = 'Машины нет', adress: {city}} = personal;
+console.log(firstName,age, car, city);
 */
 
-// Массиыф псевдомассивы =======================================
-//--------------------------------------------------------------
-/*
-const arr = [1, 2, 3, 6, 8];
 
-//arr.pop();
-arr.push(10);
+// массивы с свойства ----------------------------------------------------------
+//------------------------------------------------------------------------------
 
-console.log(arr);
+// const arr = ['alan', 'grant', 20, 'meried'];
 
-//---------------------------------------------------------
-
-for ( let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
-
-//------------------------------------------------------
-
-for (let value of arr){
-    console.log(value);
-}
-
-//-------------------------------------------------------
-
-arr.forEach(function(item, i, arr) {
-    console.log(`${i}: ${item} внутри массива ${arr}`);
-});
-
-//------------------------------------------------------
-
-const str = prompt('', '');
-const products = str.split(', ');
-console.log(products);
-
-//---------------------------------------------------------
-
-const arr = ['alan', 'grant', 22, 'study'];
-console.log(arr.sort());
-console.log(arr.join(' '));
-
-//----------------------------------------------------------
-
-const array = [ 1, 13, 2, 16, 8, 22];
-array.sort(compareNum);
-console.log(array);
-
-function compareNum(a, b) {
-    return a - b;
-}
-*/
-// Передача по ссылке или по значению, Spread оператор ==========
-//---------------------------------------------------------------
-/*
-// function copy(mainObj) {
-//     let objCopy = {};
-
-//     let key;
-//     for (key in mainObj) {
-//         objCopy[key] = mainObj[key];
-//     }
-//     return objCopy;
+// for(const key of arr){
+//    console.log(key);
 // }
 
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4,
-    }
-};
+// arr.forEach(function(key, i) {
+//     console.log(`${i}: ${key}`);
+// });
 
-// const newNumbers = copy(numbers);
+// let arrStr = arr.join(' ');
+// console.log(arrStr);
+// let strArr = arrStr.split(' ');
+// console.log(strArr);
+// console.log(arr.sort());
 
-// newNumbers.a = 10;
-// console.log(newNumbers);
-// console.log(numbers);
+// -------------------------------------------------------------------------
 
-const add = {
-    d: 17,
-    e: 20,
-};
+// const arr = [1, 2, 3, 4];
 
-console.log(Object.assign(numbers, add));
+// let sum = arr.reduce(function(elem, summ){
+//     let rezult = elem + summ;
+//     console.log(summ, elem);
+//     return rezult;
+// });
 
-//------------------------------------------------------------------
+// console.log(sum);
 
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
+// let array = [1,2,3,4]
 
-oldArray[2] = 'd';
+//   function sumElem(accumulator, currentValue) {
+//       let sum = accumulator + currentValue
+//       return sum
+//   }
+//   let result = array.reduce(sumElem, 11);
+//   console.log(result);
 
-console.log(newArray);
-console.log(oldArray);
+// Поверхностные копии обьектов ===============================================================
+//----------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------
+// w
 
-const video = ['youtube', 'video', 'rutube'],
-      blog = ['wordpress', 'livejornal', 'blogger'],
-      internet = [...video, ...blog, 'vk', 'facebook'];
-      console.log(internet);
+// function copy (objCopy) {
+//     let newObj = {};
+    
+//     for(let key in objCopy){
+//         newObj[key] =  objCopy[key];
+//     }
+//     return newObj;
+// }
 
-//--------------------------------------------------------------------
+// let obj2 = copy(obj);
 
-function log(a, b, c){
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
+// obj2.name = 'alan';
+// obj2.adress.gorod = 'minsk';
+// console.log(obj2);
+// console.log(obj);
 
-const num = [2, 5, 7];
-log(...num);
+// const obj3 = {
+//     status: 'meried',
+//     study: false,
+// } 
 
-//---------------------------------------------------------------------
+// const obj1 = Object.assign(obj, obj3);
+// console.log(obj1);
 
-const array = ['a', 'b'];
+//-----------------------------------------------------
 
-const newArr = [...array];
-console.log(newArr);
+// const obj = {
+//     name: 'allen',
+//     surname: 'grant',
+//     age: 33,
+//     adress: {
+//         gorod: 'Moscov',
+//         strasse: 'duort'
+//     }
+// }
 
-//--------------------------------------------------------------------
+// const obj3 = {
+//     status: 'meried',
+//     study: false,
+// }
 
-const q = {
-    one: 1,
-    two: 2
-}
+// const objCopy = {...obj};
 
-const newQ = {...q};
+// objCopy.adress.gorod = 'Minsk';
+// console.log(obj);
+// console.log(objCopy);
 
-console.log(newQ);
-*/
+// const objNewCopy = {...obj, ...obj3};
+// console.log(objNewCopy);
+
+//-------------------------------------------------------------
+
+// function foo(a, b, c) {
+//     console.log(a + b + c);
+// }
+
+// const arr = [2, 3, 5];
+
+// foo(...arr);
