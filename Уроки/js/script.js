@@ -343,3 +343,23 @@ const newQ = {...q};
 
 console.log(newQ);
 */
+
+// основы ООП ==========================================================
+//----------------------------------------------------------------------
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function(){
+        console.log('Hello');
+    }
+};
+
+const John = Object.create(soldier);
+
+// const john = {
+//     health: 100,
+// };
+
+//Object.setPrototypeOf(john, soldier);
+john.sayHello();
