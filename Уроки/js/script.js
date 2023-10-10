@@ -364,6 +364,29 @@ const john = Object.create(soldier);
 //Object.setPrototypeOf(john, soldier);
 john.sayHello();
 */
-// Отлавливаем ошибки========================================================
+// Динамическая типизация========================================================
 //---------------------------------------------------------------------------
+/*
+//To string
+console.log(typeof(String(null)));
+console.log(typeof(5 + ''));
+const fontSize = 26 + 'px';
 
+// To number
+console.log(typeof(Number('5')));
+console.log(typeof(+'5'));
+console.log(typeof(parseInt('15px', 10)));
+
+//To boolean 
+//1)
+let switcher = null;
+if (switcher) {
+    console.log('working...');
+}
+switcher = 1;
+if (switcher) {
+    console.log('working...');
+}
+//2)
+console.log(typeof(Boolean('4')));
+*/
