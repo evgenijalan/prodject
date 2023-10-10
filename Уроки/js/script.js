@@ -348,3 +348,5 @@ console.log(firstName,age, car, city);
 // const arr = [2, 3, 5];
 
 // foo(...arr);
+
+//
