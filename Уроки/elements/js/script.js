@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 const box = document.getElementById('box'),
       button = document.querySelectorAll('button'),
       btn = document.getElementsByTagName('button'),
@@ -33,3 +33,43 @@ hearts[2].remove();
 hearts[0].replaceWith(circles[0]);
 
 divv.insertAdjacentHTML('beforeend', '<h2> <font color="red">Hello</font></h2>');
+*/
+
+const box = document.getElementById('box'),
+      buttons = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      hearts = document.getElementsByClassName('heart'),
+      wrapper = document.querySelector('.wrapper'),
+      btns = document.querySelectorAll('button');
+
+//box.style.borderRadius = '30px'; 
+box.style.cssText = 'border-radius: 50% 20%/ 10% 40%; background-color: green';
+box.innerHTML = `<h2><font color= "white" class="text">Hello</font></h2>`;     
+document.querySelector('.text').style.cssText = 'position: absolute; margin-left: 6%; margin-top: 6%';
+
+const arr = ['aus8', 'aus10', '12x18', '18t', 'almax'];
+
+btns.forEach((item, i) => {
+    item.textContent = `${i + 1}. ${arr[i]}`;
+});
+
+btns[0].style.backgroundColor = 'orange';
+circles[0].remove();
+circles[1].replaceWith(hearts[1]);
+
+const div = document.createElement('div');
+div.classList.add('black');
+wrapper.append(div);
+
+div.innerHTML = '<h2>Hello</h2>';
+
+const obj = {
+    one: 1,
+    too: 2,
+    free: 3,
+};
+
+const{one, too, free} = obj;
+
+console.log(typeof(one));
+
