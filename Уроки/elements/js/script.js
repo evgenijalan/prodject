@@ -34,7 +34,8 @@ hearts[0].replaceWith(circles[0]);
 
 divv.insertAdjacentHTML('beforeend', '<h2> <font color="red">Hello</font></h2>');
 */
-
+//-----------------------------------------------------------------------------------------------------------------------
+/*
 const box = document.getElementById('box'),
       buttons = document.getElementsByTagName('button'),
       circles = document.getElementsByClassName('circle'),
@@ -72,4 +73,103 @@ const obj = {
 const{one, too, free} = obj;
 
 console.log(typeof(one));
+*/
+//-------------------------------------------------------------
+
+const arr = ['Aus 8', 'Aus 10', 'Almax', '12x18', '98x12'];
+
+
+const btns = document.querySelectorAll('button'),
+      box = document.querySelector('#box'),
+      circles = document.querySelectorAll('.circle');
+
+let countFunction = 0,
+    name;
+    
+btns.forEach((item, i) => {
+    item.textContent = `${i + 1}. ${arr[i]}`;
+    
+    item.addEventListener('click', (e) => {
+        
+        name = e.target.textContent;
+        //box.textContent = `${name}`;
+        if (box.textContent !== name){
+            box.innerHTML = `<h2>${name}</h2>`;
+            console.log(box.textContent)
+        }
+
+        //removeTarg();
+        
+        if (countFunction === 0) {
+            removeMenuText();
+            countFunction = 1;
+        }
+    });
+}); 
+
+let count,
+    textCircles,
+    boxName;
+function removeMenuText() {
+    count = 0;
+    
+    const workMenu = function(e) {
+        boxName = e.target.textContent;
+        circles.forEach(key => {
+            textCircles = key.textContent;
+            if (e.target.textContent !== textCircles) {
+                key.innerHTML = `<h3>${boxName}</h3>`;
+                console.log(key.textContent)
+            }
+            
+        });
+
+        count++;
+        
+        if (count == 1) {
+            box.removeEventListener('click', workMenu);
+        }
+        countFunction = 0;  
+    }
+
+    box.addEventListener('click', workMenu);
+}
+
+
+circles.forEach(elem => {
+    elem.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(1);
+    });
+});
+
+circles.forEach(cey => {
+    cey.addEventListener('mouseenter', (e) => {
+        e.target.style.cssText = `background-color: red`;
+    });
+});
+circles.forEach(key => {
+    key.addEventListener('mouseout', (e) => {
+        e.target.style.cssText = `background-color: blue`;
+    });
+});
+
+// let y;
+// function removeTarg () {
+//     y = 0;
+//     const x = function() {
+//         console.log(y);
+//         y++;
+//         if (y == 1) {
+//             box.removeEventListener('mouseenter', x);
+//         }
+//     };
+    
+//     box.addEventListener('mouseenter', x);
+// }
+
+
+
+
+
 
