@@ -80,17 +80,20 @@ const arr = ['Aus 8', 'Aus 10', 'Almax', '12x18', '98x12'];
 
 
 const btns = document.querySelectorAll('button'),
+      btn = document.querySelector('button'),
       box = document.querySelector('#box'),
+      hearts = document.querySelectorAll('.heart'),
       circles = document.querySelectorAll('.circle');
 
 let countFunction = 0,
+    countNumbBtn,
     name;
     
 btns.forEach((item, i) => {
     item.textContent = `${i + 1}. ${arr[i]}`;
     
     item.addEventListener('click', (e) => {
-        
+        countNumbBtn = i;
         name = e.target.textContent;
         //box.textContent = `${name}`;
         if (box.textContent !== name){
@@ -154,6 +157,16 @@ circles.forEach(key => {
     });
 });
 
+const div = document.createElement('div');
+div.classList.add('black');
+box.before(div);
+const btnNext = document.querySelector('.black');
+btnNext.addEventListener('click', () => {
+    console.log(btns[countNumbBtn].nextElementSibling);
+    countNumbBtn = countNumbBtn + 1;
+});
+
+
 // let y;
 // function removeTarg () {
 //     y = 0;
@@ -168,8 +181,24 @@ circles.forEach(key => {
 //     box.addEventListener('mouseenter', x);
 // }
 
+//---------------------------------------------------------------------------------------------------
+// console.log(document.querySelector('.wrapper').parentElement);
+// console.log(document.querySelector('.wrapper').nextElementSibling);
+//console.log(document.querySelector('.wrapper').previousElementSibling);
+// console.log(document.querySelector('.wrapper').firstElementChild);
+// console.log(document.querySelector('.wrapper').lastElementChild);
 
+//------------------------------------------------------------------------------------------------------
+//hearts[0].remove();
 
+// circles.forEach((item, i) => { 
+//     item.replaceWith(hearts[i]);
+// });
+//-----------------------------------------------------------------------------------------------
 
-
-
+// const div2 = document.createElement('div');
+// div2.classList.add('black');
+// // hearts[0].before(div2);
+// // hearts[0].after(div2);
+// // hearts[0].append(div2);
+// hearts[0].prepend(div2);
